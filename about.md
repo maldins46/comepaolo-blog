@@ -2,6 +2,8 @@
 layout: page
 title: About
 permalink: /about
+redirect_from:
+  - /about/
 ---
 
 To anyone wandering around here, welcome!
