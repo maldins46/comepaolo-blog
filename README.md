@@ -1,6 +1,6 @@
 # The Comepaolo Blog
 
-![Jekyll](https://img.shields.io/badge/Jekyll-v4.4-blue) ![Ruby](https://img.shields.io/badge/Ruby-2.7+-red) ![License](https://img.shields.io/badge/License-MIT-lightgrey)
+![Jekyll](https://img.shields.io/badge/Jekyll-v3.10.0-blue) ![Ruby](https://img.shields.io/badge/Ruby-3.4.1-red) ![License](https://img.shields.io/badge/License-MIT-lightgrey)
 
 **The Comepaolo blog** is a personal blog built with [Jekyll](https://jekyllrb.com/) and based on the [Mediator](https://github.com/orderedlist/mediator) theme. This repository is a fork of the original Mediator theme, customized to host my posts and personal content.
 
