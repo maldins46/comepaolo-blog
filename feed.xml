@@ -1,0 +1,339 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Comepaolo</title>
+    <description>Code, thoughts, and tales from Jesi e dintorni.
+</description>
+    <link>https://maldins46.github.io/comepaolo-blog/</link>
+    <atom:link href="https://maldins46.github.io/comepaolo-blog/feed.xml" rel="self" type="application/rss+xml" />
+    <pubDate>Tue, 26 Aug 2025 10:36:25 +0000</pubDate>
+    <lastBuildDate>Tue, 26 Aug 2025 10:36:25 +0000</lastBuildDate>
+    <generator>Jekyll v3.10.0</generator>
+    
+      <item>
+        <title>Automating my CV with GitHub Actions: versioned, auto-built, and always up-to-date</title>
+        <description>&lt;p&gt;Every student coming from a science-related university has, at some point, experimented with writing documents in &lt;a href=&quot;https://www.latex-project.org&quot;&gt;LaTeX&lt;/a&gt;. It’s a neat system designed for preparing documents, mostly used for academic purposes (nearly every scientific paper in the world is written in LaTeX), but not limited to that. Unlike tools such as Word, LaTeX is a &lt;em&gt;document preparation system&lt;/em&gt;. It separates the content of the document from its presentation (the template), and makes it easy to represent complex elements like mathematical formulas in a textual way.&lt;/p&gt;
+
+&lt;p&gt;LaTeX templates are often professional and fine-tuned. The system itself feels almost like programming — technically, it’s a markup language — which is one of the reasons it became so popular in the scientific world.&lt;/p&gt;
+
+&lt;p&gt;I first discovered LaTeX at university, and I kept using it well beyond that context. One of the first “non-academic” uses I found was writing my Curriculum Vitae. At some point, I stumbled upon a template called &lt;a href=&quot;https://www.overleaf.com/latex/templates/luxsleek-cv/qbvbqmrzxwyj&quot;&gt;LuxSleek-CV&lt;/a&gt;, originally created at the University of Luxembourg. It struck the perfect balance between elegance and readability, and it quickly became my official CV template.&lt;/p&gt;
+
+&lt;p&gt;But writing it — whether in Overleaf or locally — soon revealed a bigger problem: &lt;strong&gt;versioning&lt;/strong&gt;. Maintaining my CV wasn’t as simple as I’d hoped. Every update meant opening my editor, re-compiling the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;.tex&lt;/code&gt; file, exporting the PDF, and making sure I didn’t overwrite the wrong version. Over time, I ended up with a folder full of files named things like &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;CV-final-v2.pdf&lt;/code&gt;, &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;CV-updated.pdf&lt;/code&gt;, and of course, the infamous &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;CV-really-final.pdf&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/comepaolo-blog/assets/article_images/2025-08-23-maldini-cv/versioning-hell.png&quot; alt=&quot;The versioning hell without a versioning system. This could escalate very quickly, trust me.&quot; title=&quot;The versioning hell&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;The struggle was real. At one point, I even gave up and switched to a simple Word document — probably the least “programmer” thing a programmer could do.&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;h2 id=&quot;maldinicv&quot;&gt;MaldiniCV&lt;/h2&gt;
+
+&lt;p&gt;I spend my days working with version control, automation, and CI/CD pipelines. So I asked myself: why should my CV be exempt from those good practices?&lt;/p&gt;
+
+&lt;p&gt;That’s how &lt;a href=&quot;https://github.com/maldins46/MaldiniCV&quot;&gt;MaldiniCV&lt;/a&gt; was born.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/comepaolo-blog/assets/article_images/2025-08-23-maldini-cv/maldinicv-pc.png&quot; alt=&quot;MaldiniCV project on GitHub.&quot; title=&quot;Github Project&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Instead of treating my resume like a static document, I decided to treat it like a piece of software. The content lives in a GitHub repository, written in LaTeX, and every time I want to “release” a new version of my CV, I simply push a Git tag. Behind the scenes, a GitHub Actions workflow compiles the source, generates a polished PDF, and publishes it as a release artifact. No manual steps, no confusion about which file is the latest — just clean automation.&lt;/p&gt;
+
+&lt;p&gt;From there, I structured the repository much like a small application. The &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;src/&lt;/code&gt; folder holds my main LaTeX file, while the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;.github/workflows/&lt;/code&gt; directory contains the automation logic. The heart of it all is a workflow that installs the right TeX packages, builds the PDF, and attaches it to a GitHub release.&lt;/p&gt;
+
+&lt;p&gt;It might seem like overkill for a CV, but in practice it means I never have to think about formatting quirks or local environment issues again. If I can push code, I can update my resume.&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;h2 id=&quot;the-workflow-in-action&quot;&gt;The Workflow in Action&lt;/h2&gt;
+
+&lt;p&gt;Here’s how it plays out in real life.&lt;/p&gt;
+
+&lt;p&gt;Let’s say I add a new job or a side project to my CV. I commit the change to the LaTeX source and push it up to GitHub. When I’m ready to “publish” the new edition, I tag it like I would a software release:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;git tag v1.2.0
+git push origin v1.2.0&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;That tag is the trigger. GitHub Actions wakes up, installs a LaTeX environment, compiles my CV into a PDF, and creates a brand-new release in the repository. Within a minute or two, the final document is available to download straight from the Releases page.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/comepaolo-blog/assets/article_images/2025-08-23-maldini-cv/maldini-cv-releases.png&quot; alt=&quot;Releases screen of the project, with the version v1.0.0&quot; title=&quot;Releases page&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;What I love about this is how natural it feels. Versioning my CV is just like versioning code: the history is visible, the process is repeatable, and the output is always reliable.&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;h2 id=&quot;why-automate-a-cv&quot;&gt;Why Automate a CV?&lt;/h2&gt;
+
+&lt;p&gt;On the surface, automating a CV might sound like a niche experiment. But I’ve found it surprisingly impactful.&lt;/p&gt;
+
+&lt;p&gt;For one thing, it eliminates all the little frictions of keeping documents current. I don’t worry about which PDF I last sent, or whether the formatting broke on my machine after a package update. The build process is consistent and runs in the cloud.&lt;/p&gt;
+
+&lt;p&gt;It also adds a layer of professionalism. Each release of my CV is versioned, timestamped, and archived. If someone asked me for the version I used in an application months ago, I could retrieve it instantly. It’s like having a changelog of my professional life.&lt;/p&gt;
+
+&lt;p&gt;And maybe the biggest win: peace of mind. I know that the link to my GitHub Releases page always points to an authoritative, up-to-date version of my resume. That alone makes it worth it. When needed, it is sufficient to provide to a recruiter a link to the &lt;a href=&quot;https://github.com/maldins46/MaldiniCV/releases/latest&quot;&gt;latest release&lt;/a&gt;, as for any software library. Cool, isn’t it? :)&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;Right now, MaldiniCV does one thing well: it builds and releases my CV automatically. It is an open source project, you can even fork it and make it yours.&lt;/p&gt;
+
+&lt;p&gt;In the end, though, the beauty of this setup is its simplicity. My CV has become just another project — one that benefits from the same tools and practices I use every day as a software engineer. And that feels exactly right.&lt;/p&gt;
+</description>
+        <pubDate>Sat, 23 Aug 2025 00:00:00 +0000</pubDate>
+        <link>https://maldins46.github.io/comepaolo-blog/projects/2025/08/23/maldinicv.html</link>
+        <guid isPermaLink="true">https://maldins46.github.io/comepaolo-blog/projects/2025/08/23/maldinicv.html</guid>
+        
+        <category>cv</category>
+        
+        <category>automation</category>
+        
+        <category>latex</category>
+        
+        
+        <category>projects</category>
+        
+      </item>
+    
+      <item>
+        <title>Hoops in the Heart of Jesi: The Rise of Canestreet 3x3</title>
+        <description>&lt;p&gt;&lt;strong&gt;Summer, 2018 — Jesi.&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;It was one of those summers when time feels endless. I had just wrapped up my internship and was halfway through writing my bachelor’s thesis. Honestly, the hardest part of my university career was already behind me.&lt;/p&gt;
+
+&lt;p&gt;The days were long and slow. And then—someone had an idea.&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;h2 id=&quot;the-spark&quot;&gt;The Spark&lt;/h2&gt;
+
+&lt;p&gt;Basketball is kind of a big deal around here. Jesi spent several years in Serie A before facing some unfortunate setbacks. The passion for the sport stuck around, and many locals still play.&lt;/p&gt;
+
+&lt;p&gt;One of those hot summer evenings, I met up with my group of friends in the city center. Among those friends was Michele, 21 at the time. He’d always played basketball, and was one of the first in our group to land a steady job. But his real superpower? He’s the guy who &lt;em&gt;organizes&lt;/em&gt;. Planning Ferragosto? No problem—Michi’s already booked a camping spot in San Vicino. Want to go on holiday in Greece? He’s found the cheapest hotel in the archipelago and made the reservation. He’s the rock of the group.&lt;/p&gt;
+
+&lt;p&gt;So when he suggested &lt;em&gt;turning the San Sebastiano parish into a basketball arena,&lt;/em&gt; we knew he meant business.&lt;/p&gt;
+
+&lt;p&gt;And just like that, &lt;strong&gt;The Canestreet&lt;/strong&gt; was born.&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;h2 id=&quot;the-first-time&quot;&gt;The First Time&lt;/h2&gt;
+
+&lt;p&gt;Jesi wasn’t new to basketball tournaments. Years ago, some were held at the sports complex near the high school, and even earlier, right in the main square—with big-name guests. But it had been a while since anything like that had happened. The goal was simple: fill the summer void with something fun. 3x3 basketball is a street sport—games take place on a half-court, tournament-style, with short, fast-paced matches.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/comepaolo-blog/assets/article_images/2025-06-22-canestreet/canestreet2018jumping.jpg&quot; alt=&quot;Ballers under SanSeba&apos;s sunset&quot; title=&quot;Ballers under SanSeba&apos;s sunset&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;The plan was to host an amateur tournament with some of Michele’s teammates. The venue? San Sebastiano, a parish in downtown Jesi, just across from his house. The tournament’s name: &lt;strong&gt;The Canestreet&lt;/strong&gt;. Why that name? Honestly, no clue. It’s a mashup of &lt;em&gt;canestro&lt;/em&gt; (basket) and &lt;em&gt;street&lt;/em&gt;, not even quite captivating, actually. But when Michi makes a call, there’s no room for democracy.&lt;/p&gt;
+
+&lt;p&gt;To pull it off, Michele needed a team. A few of our friends jumped in immediately—Federico, his best friend, and Lorenzo, a teammate. Soon after, I joined too.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/comepaolo-blog/assets/article_images/2025-06-22-canestreet/canestreet2018chill.jpg&quot; alt=&quot;That&apos;s me! And the staff too, chillin&apos; under the tendone&quot; title=&quot;The first Canestreet chillin&apos;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;I had never played basketball. But I had something else: a laptop and a bit of creativity. So I became the computer guy—running our Instagram page, trying to hype up the event with stories and posts, and experimenting with ways to reach people. I also ended up being the sound guy—plugging in the speakers, cueing up the playlists, packing everything down at night. It wasn’t glamorous, but it was fun. And all of that, with exactly zero euros in the budget.&lt;/p&gt;
+
+&lt;p&gt;Within a month, the Michele Mosca organizational machine was in full swing. We gathered enough teams, secured permission from the parish, bought a few cheap medals, and pulled off our first tournament. We had no sponsors (well, none we could publicly acknowledge), and no funding.&lt;/p&gt;
+
+&lt;p&gt;But it worked. The event was a blast.&lt;/p&gt;
+
+&lt;p&gt;And most importantly—it &lt;em&gt;felt&lt;/em&gt; like something.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/comepaolo-blog/assets/article_images/2025-06-22-canestreet/firstCanestaff.jpg&quot; alt=&quot;The first canestaff, est. 2018&quot; title=&quot;The First Canestaff&quot; /&gt;&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;h2 id=&quot;growing-pains-and-giant-leaps&quot;&gt;Growing Pains and Giant Leaps&lt;/h2&gt;
+
+&lt;p&gt;That first success was a spark, and it lit a fire. The following year, we moved to a larger space: &lt;strong&gt;San Pietro Martire&lt;/strong&gt;, a parish with more room and more visibility. We joined the official &lt;strong&gt;FIP 3x3 Summer Circuit&lt;/strong&gt;. We added categories. Got real sponsors. Learned to plan better. Messed up, learned again.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/comepaolo-blog/assets/article_images/2025-06-22-canestreet/2020finals.jpg&quot; alt=&quot;Snapshot from the 2020 finals&quot; title=&quot;2020 Finals&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Every summer became a new challenge.&lt;/p&gt;
+
+&lt;p&gt;By 2022, we had moved to &lt;strong&gt;Piazza della Repubblica&lt;/strong&gt;—the beating heart of Jesi. With support from the municipality, we installed a modular court and hoop in the middle of the square, right under the obelisk. The sound of basketballs bouncing off cobblestones became the new summer anthem.&lt;/p&gt;
+
+&lt;p&gt;We introduced under-age categories, both male and female open tournaments, and even a 3-point contest, including a version just for amateurs. Each edition brought new energy, new faces, and new memories.&lt;/p&gt;
+
+&lt;p&gt;No exaggeration: Canestreet has become a true part of Jesi’s summer identity—and equally a part of &lt;em&gt;our&lt;/em&gt; lives as organizers. It’s all thanks to Michele’s wild idea and the drive of a guy who keeps leading us on this crazy ride.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/comepaolo-blog/assets/article_images/2025-06-22-canestreet/repubblica2024.jpg&quot; alt=&quot;The Canestreet in Piazza Della Repubblica for the first time, 2024&quot; title=&quot;Piazza della Repubblica 2024&quot; /&gt;&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;h2 id=&quot;side-projects-big-lessions&quot;&gt;Side Projects, Big Lessions&lt;/h2&gt;
+
+&lt;p&gt;Along the way, &lt;strong&gt;Canestreet&lt;/strong&gt; became more than a tournament. It became my personal playground for experimentation.&lt;/p&gt;
+
+&lt;h3 id=&quot;the-canescoreboard-&quot;&gt;&lt;em&gt;The CaneScoreboard&lt;/em&gt; 🏀&lt;/h3&gt;
+
+&lt;p&gt;In the early years, we didn’t have access to electronic scoreboards. So I built one.&lt;br /&gt;
+&lt;strong&gt;The CaneScoreboard&lt;/strong&gt; (&lt;a href=&quot;https://github.com/maldins46/ThecaneScoreboard&quot;&gt;github&lt;/a&gt;, &lt;a href=&quot;https://thecanescoreboard.web.app/login&quot;&gt;live demo&lt;/a&gt;) is a simple web app connected to a Firebase backend that lets us display live scores, fouls, and time. One screen is in editor mode (for updates), the other in display mode (for the audience). Low-latency. Real-time. It may not be beautiful, but it works—and it feels amazing to see people rely on something you made with your own hands.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/comepaolo-blog/assets/article_images/2025-06-22-canestreet/scoreboard.jpg&quot; alt=&quot;TheCaneScoraboard display mode in place, 2019&quot; title=&quot;TheCaneScoreboard display&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;the-website--thecanestreetit-&quot;&gt;&lt;em&gt;The Website — thecanestreet.it&lt;/em&gt; 🌐&lt;/h3&gt;
+
+&lt;p&gt;I also created and maintained &lt;a href=&quot;https://thecanestreet.it/&quot;&gt;the website&lt;/a&gt;, which serves as our digital headquarters.&lt;br /&gt;
+Built with WordPress, it includes sign-up forms, live brackets and results, sponsor visibility, and tournament rules. It may not be a full-blown platform, but it’s a living, evolving part of the project—and a place where I got to mix my coding, UX, and design skills.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/comepaolo-blog/assets/article_images/2025-06-22-canestreet/websiteHomepage.png&quot; alt=&quot;thecanestreet.it homepage&quot; title=&quot;Website Homepage&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;the-instagram--canestreet3x3-&quot;&gt;&lt;em&gt;The Instagram — @canestreet3x3&lt;/em&gt; 📸&lt;/h3&gt;
+
+&lt;p&gt;Our &lt;a href=&quot;https://www.instagram.com/canestreet3x3&quot;&gt;Instagram page&lt;/a&gt; is where the vibes live.&lt;br /&gt;
+I collaborate with friends who shoot photos, and I design infographics and announcements using tools like Canva and GIMP. Social media may not win tournaments, but it definitely brings people to them.&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;&lt;strong&gt;Canestreet&lt;/strong&gt; started as a small neighborhood project. Today, it’s a city-wide celebration of basketball, friendship, and initiative. And for me, it’s been a personal lab—an experience that mixed creativity, technology, and community spirit in the best possible way. I can’t wait to see where it takes us next!&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/comepaolo-blog/assets/article_images/2025-06-22-canestreet/crew.jpg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+</description>
+        <pubDate>Sun, 22 Jun 2025 00:00:00 +0000</pubDate>
+        <link>https://maldins46.github.io/comepaolo-blog/projects/2025/06/22/canestreet.html</link>
+        <guid isPermaLink="true">https://maldins46.github.io/comepaolo-blog/projects/2025/06/22/canestreet.html</guid>
+        
+        <category>projects</category>
+        
+        <category>basketball</category>
+        
+        
+        <category>projects</category>
+        
+      </item>
+    
+      <item>
+        <title>Live Scores, Real Pride: The Story Behind BetAssist</title>
+        <description>&lt;p&gt;&lt;strong&gt;“What’s the project you’re most proud of?”&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Every software developer has faced this question at least once. Maybe during an interview, maybe in a conversation with a colleague, a friend—or even with themselves. Most of the time, it’s not an easy one to answer.&lt;/p&gt;
+
+&lt;p&gt;It was June 2022. I was deep into the hiring process with a foreign software company. Not a big tech giant, but one of those solid mid-sized companies with a structured, multi-step approach. One of those steps was a behavioral interview. The interviewer asked about my values, how I approached challenges, and how I’d handled difficult situations.&lt;/p&gt;
+
+&lt;p&gt;That’s when the famous question came up again.&lt;/p&gt;
+
+&lt;p&gt;I paused for a few seconds. I had worked on many projects over the years, so picking just one wasn’t easy. But after a moment of reflection, I decided to stop overthinking and go with the most honest answer that came to mind:&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;“BetAssist.”&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;That was my bet.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;&amp;quot;/comepaolo-blog/assets/article_images/2025-06-16-betassist/header.png&amp;quot;&quot; alt=&quot;First BetAssist header on the Google Play store.&quot; title=&quot;First BetAssist header on the Google Play store.&quot; /&gt;&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;h2 id=&quot;the-idea&quot;&gt;The Idea&lt;/h2&gt;
+
+&lt;p&gt;I genuinely think BetAssist is the project I’m most proud of. It’s an Android app I started building back in 2017. Its main purpose? To &lt;strong&gt;track football betslips&lt;/strong&gt; with live score updates and offer betting suggestions.&lt;/p&gt;
+
+&lt;p&gt;For the unfamiliar, a &lt;strong&gt;betslip&lt;/strong&gt; is essentially a form that records the details of a sports bet. At the time, in Italy, it was still common to place bets in physical shops and walk away with a paper receipt. You had to track your results manually—either by following each game individually or checking scores across various apps or websites. The official betting apps either weren’t great yet or weren’t widely adopted.&lt;/p&gt;
+
+&lt;p&gt;That’s when the idea hit me:&lt;br /&gt;
+&lt;em&gt;What if all of this could be done in a single app?&lt;/em&gt;&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;h2 id=&quot;the-process&quot;&gt;The Process&lt;/h2&gt;
+
+&lt;p&gt;In 2017, I was in my second year of a Computer Science degree. I had just finished an object-oriented programming course in Java and was eager to apply those concepts in the real world.&lt;/p&gt;
+
+&lt;p&gt;At that time, Android apps were still written in Java. So I picked up a book I still have in my Google Drive to this day: &lt;a href=&quot;https://github.com/PacktPublishing/Android-Programming-for-Beginners-Third-Edition&quot;&gt;&lt;em&gt;Android Programming for Beginners&lt;/em&gt; by John Horton&lt;/a&gt;. It was a hands-on introduction to Android development using Android Studio. The book’s main project was a simple note-taking app, which was used to teach UI design, app lifecycle, persistence, networking, and more.&lt;/p&gt;
+
+&lt;p&gt;I followed the guide chapter by chapter. But in the back of my mind, I was already thinking about BetAssist.&lt;br /&gt;
+&lt;em&gt;“This ListView for notes would be perfect for a betslip list!”&lt;/em&gt;&lt;br /&gt;
+That single thought drove my motivation and learning throughout the book.&lt;/p&gt;
+
+&lt;p&gt;By the time I finished, I was ready to move on to something of my own.&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;h2 id=&quot;the-mvp&quot;&gt;The MVP&lt;/h2&gt;
+
+&lt;p&gt;The first version of BetAssist was simple: a &lt;strong&gt;betslip editor&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;&amp;quot;/comepaolo-blog/assets/article_images/2025-06-16-betassist/mascotte.jpg&amp;quot;&quot; alt=&quot;BetAssist had a mascotte also. It didn&apos;t have a name, but was used on some of the graphics and logo, inspired by the Android original logo.&quot; title=&quot;The BetAssist Mascotte&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Users could create betslips by combining clubs from various European leagues. They could define matches, choose outcomes like 1X2 or over/under 2.5 goals, assign dates, and—crucially—receive phone notifications when the matches ended.&lt;/p&gt;
+
+&lt;p&gt;I had so much fun building it. I loved the immediacy of Android Studio. I could see results instantly, even on my personal phone. I even designed the UI myself—experimenting with colors, layouts, and a logo (which got me to learn a bit of Photoshop along the way).&lt;/p&gt;
+
+&lt;p&gt;But despite how fun it was, I knew it wasn’t quite &lt;em&gt;there&lt;/em&gt; yet.&lt;/p&gt;
+
+&lt;p&gt;It was, at that stage, little more than a glorified note-taking app. It hadn’t yet solved the core problem. It wasn’t a product—it was a personal sandbox. But I already had ideas for version 2.&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;h2 id=&quot;things-getting-live&quot;&gt;Things Getting Live&lt;/h2&gt;
+
+&lt;p&gt;To become truly useful, BetAssist needed one critical upgrade: &lt;strong&gt;live scores&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;p&gt;I didn’t want to get tangled in web scraping, and there was no chance I’d enter scores manually. So I started looking for APIs. That’s when I found &lt;a href=&quot;https://www.football-data.org&quot;&gt;Football-Data.org&lt;/a&gt;—a free API with access to near real-time football scores from major European leagues.&lt;/p&gt;
+
+&lt;p&gt;The free tier was generous and perfect for my needs. Even today, I think it’s a gem: live scores (with a ~10-minute delay), solid coverage, and reasonable rate limits. For a small monthly fee, you could even unlock global data—but I never needed to.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;&amp;quot;/comepaolo-blog/assets/article_images/2025-06-16-betassist/architecture.png&amp;quot;&quot; alt=&quot;Quick overview on the BetAssist Architecture&quot; title=&quot;Architecture Overview&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Like many early developers, I started small. A university friend and I built a backend in &lt;strong&gt;PHP&lt;/strong&gt; (yes, forgive us—it was all we knew besides Java), hosted on &lt;strong&gt;Heroku&lt;/strong&gt;. Every 10 minutes, the backend would ping the Football-Data API, collect score updates, and store them in &lt;strong&gt;Google Firestore&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;p&gt;Why Firestore? It integrated seamlessly with Android, had a generous free tier, and—let’s be honest—I wasn’t ready for anything more complex at that point. But it worked. And looking back, it was kind of impressive that it worked at all.&lt;/p&gt;
+
+&lt;p&gt;Eventually, I added a section for browsing upcoming matches, with quick actions to start building betslips. And most importantly, &lt;strong&gt;live score notifications&lt;/strong&gt; were now in place.&lt;br /&gt;
+The betslip lifecycle was finally complete.&lt;/p&gt;
+
+&lt;p&gt;BetAssist had become a real product.&lt;/p&gt;
+
+&lt;p&gt;And it was the best feeling in the world.&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;h2 id=&quot;growing-together&quot;&gt;Growing Together&lt;/h2&gt;
+
+&lt;p&gt;With the app working, I couldn’t wait to share it with the world. I created a developer account on the Google Play Store and prepared for launch.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;&amp;quot;/comepaolo-blog/assets/article_images/2025-06-16-betassist/screens.jpg&amp;quot;&quot; alt=&quot;Original screenshots from the BetAssist app.&quot; title=&quot;Original Screenshots&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;I’ll spare you the gritty details (maybe another blog post someday), but publishing your first app is a trip. Keystore generation, signing builds, making screenshots, writing copy, creating privacy policies—it’s a lot.&lt;/p&gt;
+
+&lt;p&gt;But eventually, &lt;strong&gt;BetAssist was live&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;p&gt;Seeing real people download and review something you built is electrifying. The download count ticked up. Comments started appearing. It wasn’t millions of users—but it was &lt;em&gt;mine&lt;/em&gt;.&lt;/p&gt;
+
+&lt;p&gt;Over the years, the app grew, and so did I. I added match predictions (basic regression models running on the device), partnered with websites, improved the design, and refactored endlessly as my coding skills matured.&lt;/p&gt;
+
+&lt;p&gt;At one point, I even monetized the app. I added banners, and later a paid “Pro” version without ads. To my surprise, it actually brought in some money. Not a fortune, but enough to feel &lt;em&gt;real&lt;/em&gt;.&lt;/p&gt;
+
+&lt;p&gt;Eventually, I stopped the monetization. I wasn’t sure whether it was fully legal to earn revenue without a proper &lt;em&gt;partita IVA&lt;/em&gt; (Italian VAT number), and I didn’t want to risk it.&lt;/p&gt;
+
+&lt;p&gt;But truthfully, the money was never the point.&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;h2 id=&quot;the-present&quot;&gt;The Present&lt;/h2&gt;
+
+&lt;p&gt;Today, BetAssist is mostly in hibernation.&lt;/p&gt;
+
+&lt;p&gt;The Heroku backend was shut down about a year ago. I think the app is still available on the Play Store, though only partially functional.&lt;/p&gt;
+
+&lt;p&gt;BetAssist was never meant to be a business. It was my lab. It was where I learned to write real code, ship to real users, and fix real bugs.&lt;/p&gt;
+
+&lt;p&gt;It was the first time I saw something go from an idea in my head to a thing in people’s hands. And I believe every developer needs that kind of project—one that belongs entirely to them.&lt;/p&gt;
+
+&lt;p&gt;In the end, the most important feature of BetAssist wasn’t live scores, push notifications, or betting logic. It was &lt;strong&gt;momentum&lt;/strong&gt;—the creative spark it gave me, the confidence it built, the curiosity it unlocked.&lt;/p&gt;
+
+&lt;p&gt;So if you’re a developer stuck in tutorials, wondering what to build next—just start. Solve your own problem. Scratch your own itch. It doesn’t have to be revolutionary. It just has to matter to &lt;em&gt;you&lt;/em&gt;.&lt;/p&gt;
+
+&lt;p&gt;Because sometimes, the best way to grow isn’t by reading more books. It’s by betting on yourself.&lt;/p&gt;
+
+&lt;p&gt;And honestly? That’s a bet worth taking.&lt;/p&gt;
+</description>
+        <pubDate>Mon, 16 Jun 2025 00:00:00 +0000</pubDate>
+        <link>https://maldins46.github.io/comepaolo-blog/projects/2025/06/16/betassist.html</link>
+        <guid isPermaLink="true">https://maldins46.github.io/comepaolo-blog/projects/2025/06/16/betassist.html</guid>
+        
+        <category>projects</category>
+        
+        <category>java</category>
+        
+        <category>android</category>
+        
+        
+        <category>projects</category>
+        
+      </item>
+    
+  </channel>
+</rss>
