@@ -57,7 +57,7 @@ bundle exec jekyll serve
 
 ## Deployment
 
-I will soon add GitHub Actions to automatically deploy the blog to GitHub Pages. For now, the site can be built and served locally.
+Website is automatically deployed on each commit in `master`, using a dedicated GitHub Action.
 
 ## License
 
