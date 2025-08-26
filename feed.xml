@@ -6,8 +6,8 @@
 </description>
     <link>https://maldins46.github.io/comepaolo-blog/</link>
     <atom:link href="https://maldins46.github.io/comepaolo-blog/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Tue, 26 Aug 2025 11:28:01 +0000</pubDate>
-    <lastBuildDate>Tue, 26 Aug 2025 11:28:01 +0000</lastBuildDate>
+    <pubDate>Tue, 26 Aug 2025 11:41:58 +0000</pubDate>
+    <lastBuildDate>Tue, 26 Aug 2025 11:41:58 +0000</lastBuildDate>
     <generator>Jekyll v3.10.0</generator>
     
       <item>
@@ -76,8 +76,10 @@ git push origin v1.2.0&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 &lt;p&gt;In the end, though, the beauty of this setup is its simplicity. My CV has become just another project — one that benefits from the same tools and practices I use every day as a software engineer. And that feels exactly right.&lt;/p&gt;
 </description>
         <pubDate>Sat, 23 Aug 2025 00:00:00 +0000</pubDate>
-        <link>https://maldins46.github.io/comepaolo-blog/projects/2025/08/23/maldinicv.html</link>
-        <guid isPermaLink="true">https://maldins46.github.io/comepaolo-blog/projects/2025/08/23/maldinicv.html</guid>
+        <link>https://maldins46.github.io/comepaolo-blog/projects/maldini-cv/</link>
+        <guid isPermaLink="true">https://maldins46.github.io/comepaolo-blog/projects/maldini-cv/</guid>
+        
+        <category>projects</category>
         
         <category>cv</category>
         
@@ -184,15 +186,15 @@ I collaborate with friends who shoot photos, and I design infographics and annou
 &lt;p&gt;&lt;img src=&quot;/comepaolo-blog/assets/article_images/2025-06-22-canestreet/crew.jpg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 </description>
         <pubDate>Sun, 22 Jun 2025 00:00:00 +0000</pubDate>
-        <link>https://maldins46.github.io/comepaolo-blog/projects/2025/06/22/canestreet.html</link>
-        <guid isPermaLink="true">https://maldins46.github.io/comepaolo-blog/projects/2025/06/22/canestreet.html</guid>
+        <link>https://maldins46.github.io/comepaolo-blog/sport/canestreet/</link>
+        <guid isPermaLink="true">https://maldins46.github.io/comepaolo-blog/sport/canestreet/</guid>
         
-        <category>projects</category>
+        <category>sport</category>
         
         <category>basketball</category>
         
         
-        <category>projects</category>
+        <category>sport</category>
         
       </item>
     
@@ -321,8 +323,8 @@ The betslip lifecycle was finally complete.&lt;/p&gt;
 &lt;p&gt;And honestly? That’s a bet worth taking.&lt;/p&gt;
 </description>
         <pubDate>Mon, 16 Jun 2025 00:00:00 +0000</pubDate>
-        <link>https://maldins46.github.io/comepaolo-blog/projects/2025/06/16/betassist.html</link>
-        <guid isPermaLink="true">https://maldins46.github.io/comepaolo-blog/projects/2025/06/16/betassist.html</guid>
+        <link>https://maldins46.github.io/comepaolo-blog/projects/betassist/</link>
+        <guid isPermaLink="true">https://maldins46.github.io/comepaolo-blog/projects/betassist/</guid>
         
         <category>projects</category>
         
