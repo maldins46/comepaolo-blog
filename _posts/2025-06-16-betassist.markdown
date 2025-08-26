@@ -6,6 +6,7 @@ categories: projects
 tags: projects java android
 image: /assets/article_images/2025-06-16-betassist/betback.jpg
 image2: /assets/article_images/2025-06-16-betassist/betback.jpg
+permalink: /:categories/:title/
 ---
 
 **"What's the project you're most proud of?"**

@@ -3,9 +3,10 @@ layout: post
 title: "Automating my CV with GitHub Actions: versioned, auto-built, and always up-to-date"
 date: 2025-08-23 00:00:00
 categories: projects
-tags: cv automation latex
+tags: projects cv automation latex
 image: /assets/article_images/2025-08-23-maldini-cv/MaldiniCV-back.jpg
 image2: /assets/article_images/2025-08-23-maldini-cv/MaldiniCV-back.jpg
+permalink: /:categories/:title/
 ---
 
 Every student coming from a science-related university has, at some point, experimented with writing documents in [LaTeX](https://www.latex-project.org). It’s a neat system designed for preparing documents, mostly used for academic purposes (nearly every scientific paper in the world is written in LaTeX), but not limited to that. Unlike tools such as Word, LaTeX is a _document preparation system_. It separates the content of the document from its presentation (the template), and makes it easy to represent complex elements like mathematical formulas in a textual way.

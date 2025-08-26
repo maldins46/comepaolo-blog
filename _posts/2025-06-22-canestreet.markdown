@@ -2,10 +2,11 @@
 layout: post
 title: "Hoops in the Heart of Jesi: The Rise of Canestreet 3x3"
 date: 2025-06-22 00:00:00
-categories: projects
-tags: projects basketball
+categories: sport
+tags: sport basketball
 image: /assets/article_images/2025-06-22-canestreet/basket.jpg
 image2: /assets/article_images/2025-06-22-canestreet/basket.jpg
+permalink: /:categories/:title/
 ---
 
 **Summer, 2018 — Jesi.**
