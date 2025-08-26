@@ -1,6 +1,7 @@
 # The Comepaolo Blog
 
 ![Jekyll](https://img.shields.io/badge/Jekyll-v3.10.0-blue) ![Ruby](https://img.shields.io/badge/Ruby-3.4.1-red) ![License](https://img.shields.io/badge/License-MIT-lightgrey)
+[![Deploy Jekyll site to Pages](https://github.com/maldins46/comepaolo-blog/actions/workflows/gh-pages.yml/badge.svg)](https://github.com/maldins46/comepaolo-blog/actions/workflows/gh-pages.yml)
 
 **The Comepaolo blog** is a personal blog built with [Jekyll](https://jekyllrb.com/) and based on the [Mediator](https://github.com/orderedlist/mediator) theme. This repository is a fork of the original Mediator theme, customized to host my posts and personal content.
 
@@ -55,10 +56,11 @@ bundle exec jekyll serve
 - `_includes/` — Header, footer, and social link partials
 - `_posts/` — Markdown blog posts
 - `assets/` — CSS, JS, images, and other static assets
+- `legal/` — Markdown privacy policies and conditions from my apps
 
 ## Deployment
 
-Website is automatically deployed on each commit in `master`, using a dedicated GitHub Action.
+Website is automatically deployed on each commit in `master`, using a dedicated GitHub Action, on my personal domain [riccardomaldini.it](https://riccardomaldini.it).
 
 ## License
 
