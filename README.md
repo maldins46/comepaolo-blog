@@ -4,12 +4,13 @@
 
 **The Comepaolo blog** is a personal blog built with [Jekyll](https://jekyllrb.com/) and based on the [Mediator](https://github.com/orderedlist/mediator) theme. This repository is a fork of the original Mediator theme, customized to host my posts and personal content.
 
-## Features
+## Features (what's more over Mediator)
 
-- Clean and responsive design from the Mediator theme
-- Supports posts, tags, and categories
-- Social links integration (GitHub, LinkedIn, Instagram, Email)
-- Ready for future GitHub Pages deployment via GitHub Actions
+- Customization of the blog posts and sections based on my needs (obviously)
+- Extended support for tags. From this fork now the posts' tags appear on the section, and clicking on them redirects to the tag page with all the linked items
+- Automated GitHub Pages deployment via GitHub Actions: each commit in `master` branch triggers a deploy. The environment is configured to point to my personal website
+- Add `legal` section to host all the policies linked to my apps, that I had on my previous website (with 1-to-1 retrocompatibility, and enhanced design based on this theme)
+- Various minor tweaks and enhancements over the original theme (favicon extended support, updated fontawesome version, and others)
 
 ## Credits
 
