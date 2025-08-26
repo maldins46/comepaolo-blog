@@ -65,7 +65,7 @@ For one thing, it eliminates all the little frictions of keeping documents curre
 
 It also adds a layer of professionalism. Each release of my CV is versioned, timestamped, and archived. If someone asked me for the version I used in an application months ago, I could retrieve it instantly. It’s like having a changelog of my professional life.
 
-And maybe the biggest win: peace of mind. I know that the link to my GitHub Releases page always points to an authoritative, up-to-date version of my resume. That alone makes it worth it. When needed, it is sufficient to provide to a recruiter a link to the [latest release](https://github.com/maldins46/MaldiniCV/releases/latest), as for any software library. Cool, isn't it? :)
+And maybe the biggest win: peace of mind. I know that the link to my GitHub Releases page always points to an authoritative, up-to-date version of my resume. That alone makes it worth it. When needed, it is sufficient to provide to a recruiter a link to the [latest release](https://github.com/maldins46/MaldiniCV/releases/latest/download/cv-maldini.pdf), as for any software library. Cool, isn't it? :)
 
 ---
 
