@@ -1,78 +1,66 @@
-mediator
-========
+# The Comepaolo Blog
 
-A medium inspired Jekyll blog theme. The basic idea came from the Ghost theme
-[Readium 2.0](http://www.svenread.com/readium-ghost-theme/). I use mediator on my own blog [The Base](http://blog.base68.com).
+![Jekyll](https://img.shields.io/badge/Jekyll-v4.4-blue) ![Ruby](https://img.shields.io/badge/Ruby-2.7+-red) ![License](https://img.shields.io/badge/License-MIT-lightgrey)
 
-Screenshots
---------
-![screenshot](/assets/images/screenshot1.jpg)
-![screenshot](/assets/images/screenshot2.jpg)
-![screenshot](/assets/images/screenshot3.jpg)
+**The Comepaolo blog** is a personal blog built with [Jekyll](https://jekyllrb.com/) and based on the [Mediator](https://github.com/orderedlist/mediator) theme. This repository is a fork of the original Mediator theme, customized to host my posts and personal content.
 
-Features
--------
-* Fully Responsive layout
-* Use header images in articles, if you want to (add tag "image" and url to the image in the front matter section of a post)
-* Minimal design
-* Featured article support
-* FontAwesome implemented for easy use of icons fonts
-* Free & Open Source Font usage
+## Features
 
-Getting Started
----
-- [Fork this repository](https://github.com/dirkfabisch/mediator)
-- Clone it: `git clone https://github.com/YOUR-USER/mediator`
-- Install the requried gems ([GitHub Pages](https://github.com/github/pages-gem), [Bourbon](https://github.com/thoughtbot/bourbon) and [Jekyll](https://github.com/jekyll/jekyll), [Jemoji](https://github.com/jekyll/jemoji)): `bundle install`
-- Run the jekyll server: `bundle exec jekyll serve`
+- Clean and responsive design from the Mediator theme
+- Supports posts, tags, and categories
+- Social links integration (GitHub, LinkedIn, Instagram, Email)
+- Ready for future GitHub Pages deployment via GitHub Actions
 
-You should have a server up and running locally at <http://localhost:4000>.
+## Credits
 
-Configuration
------
+- Original theme: [Mediator by Ordered List](https://github.com/orderedlist/mediator)
+- Built with [Jekyll](https://jekyllrb.com/)
 
-The main settings happen in side of the _config.yml file:
+## Getting Started
 
-### Site
+### Prerequisites
 
-Main settings for the site
+- [Ruby](https://www.ruby-lang.org/en/documentation/installation/) 2.7+
+- [Bundler](https://bundler.io/) (`gem install bundler`)
+- [Jekyll](https://jekyllrb.com/docs/installation/) (`gem install jekyll`)
 
-* **title**: name of your site
-* **description**: description of your site
-* **logo**: small logo for the site (300x * 300x)
-* **cover**: large background image on the index page
+### Installation
 
-* **name**: name site owner
-* **email**: mail address of the site owner
-* **author**: author name
-* **author_image**: small image of author (300x * 300px)
-* **disqus**: add a disqus forum for your post
+1. Clone the repository:
 
-### Social
-
-The template allows to add all major social platforms to your site.
-Fill the the form for each platform. If you leave the share_* entries empty, the sharing buttons below a post are not shown.  If you leave the **url** and **desc** empty the icons are not shown on the index page, but the share icons on the article pages remains untouched (Thanks to [Phil](https://github.com/philsturgeon))
-
-* **icon**:	name of social platform (must match a name of [font-awsome](http://fortawesome.github.io/Font-Awesome/) icon set )
-* **url**:	url of your account
-* **desc**: slogan of the platform
-* **share_url**: share url
-* **share_title**: first part of url for the title
-* **share_link**: second part of the share url for the link to the post
-
-The Liquid template engine will magical combine the different parts to a share url.
-
+```bash
+git clone https://github.com/maldins46/comepaolo-blog.git
+cd comepaolo-blog
 ```
-http://twitter.com/share?text=post_title&amp;url=post_url
-````
 
-See [_config.yml](https://github.com/dirkfabisch/mediator/blob/master/_config.yml) for more examples.
+2. Install dependencies:
 
-Licensing
----------
+```bash
+bundle install
+```
 
-[MIT](https://github.com/dirkfabisch/mediator/blob/master/LICENCE) with no added caveats, so feel free to use this on your site without linking back to me or using a disclaimer or anything silly like that.
+3. Build and serve the site locally:
 
-Contact
--------
-I'd love to hear from you at [@dirkfabisch](https://twitter.com/dirkfabisch). Feel free to open issues if you run into trouble or have suggestions. Pull Requests always welcome.
+```bash
+bundle exec jekyll serve
+```
+
+4. Open your browser at `http://localhost:4000`
+
+---
+
+## Project Structure
+
+- `_config.yml` — Main Jekyll configuration
+- `_layouts/` — HTML layouts for posts, pages, home
+- `_includes/` — Header, footer, and social link partials
+- `_posts/` — Markdown blog posts
+- `assets/` — CSS, JS, images, and other static assets
+
+## Deployment
+
+I will soon add GitHub Actions to automatically deploy the blog to GitHub Pages. For now, the site can be built and served locally.
+
+## License
+
+This project inherits the license of the Mediator theme (MIT). See the original [Mediator repository](https://github.com/dirkfabisch/mediator) for license details.
