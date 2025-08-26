@@ -22,7 +22,7 @@ I paused for a few seconds. I had worked on many projects over the years, so pic
 
 That was my bet.
 
-![First BetAssist header on the Google Play store.]({{ site.baseurl }}/assets/article_images/2025-06-16-betassist/header.png "First BetAssist header on the Google Play store.")
+![First BetAssist header on the Google Play store.]("{{ site.baseurl }}/assets/article_images/2025-06-16-betassist/header.png" "First BetAssist header on the Google Play store.")
 
 ---
 
@@ -55,7 +55,7 @@ By the time I finished, I was ready to move on to something of my own.
 
 The first version of BetAssist was simple: a **betslip editor**.
 
-![BetAssist had a mascotte also. It didn't have a name, but was used on some of the graphics and logo, inspired by the Android original logo.]({{ site.baseurl }}/assets/article_images/2025-06-16-betassist/mascotte.jpg "The BetAssist Mascotte")
+![BetAssist had a mascotte also. It didn't have a name, but was used on some of the graphics and logo, inspired by the Android original logo.]("{{ site.baseurl }}/assets/article_images/2025-06-16-betassist/mascotte.jpg" "The BetAssist Mascotte")
 
 Users could create betslips by combining clubs from various European leagues. They could define matches, choose outcomes like 1X2 or over/under 2.5 goals, assign dates, and—crucially—receive phone notifications when the matches ended.
 
@@ -75,7 +75,7 @@ I didn’t want to get tangled in web scraping, and there was no chance I’d en
 
 The free tier was generous and perfect for my needs. Even today, I think it’s a gem: live scores (with a ~10-minute delay), solid coverage, and reasonable rate limits. For a small monthly fee, you could even unlock global data—but I never needed to.
 
-![Quick overview on the BetAssist Architecture]({{ site.baseurl }}/assets/article_images/2025-06-16-betassist/architecture.png "Architecture Overview")
+![Quick overview on the BetAssist Architecture]("{{ site.baseurl }}/assets/article_images/2025-06-16-betassist/architecture.png" "Architecture Overview")
 
 Like many early developers, I started small. A university friend and I built a backend in **PHP** (yes, forgive us—it was all we knew besides Java), hosted on **Heroku**. Every 10 minutes, the backend would ping the Football-Data API, collect score updates, and store them in **Google Firestore**.
 
@@ -94,7 +94,7 @@ And it was the best feeling in the world.
 
 With the app working, I couldn’t wait to share it with the world. I created a developer account on the Google Play Store and prepared for launch.
 
-![Original screenshots from the BetAssist app.]({{ site.baseurl }}/assets/article_images/2025-06-16-betassist/screens.jpg "Original Screenshots")
+![Original screenshots from the BetAssist app.]("{{ site.baseurl }}/assets/article_images/2025-06-16-betassist/screens.jpg" "Original Screenshots")
 
 I’ll spare you the gritty details (maybe another blog post someday), but publishing your first app is a trip. Keystore generation, signing builds, making screenshots, writing copy, creating privacy policies—it’s a lot.
 

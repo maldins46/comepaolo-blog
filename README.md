@@ -47,8 +47,6 @@ bundle exec jekyll serve
 
 4. Open your browser at `http://localhost:4000`
 
----
-
 ## Project Structure
 
 - `_config.yml` — Main Jekyll configuration
