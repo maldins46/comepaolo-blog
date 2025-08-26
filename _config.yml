@@ -25,8 +25,9 @@ author_bio: "Born to make fumé, forced to scale legacy systems."
 
 paginate: 5
 
-url: "https://maldins46.github.io" # the base hostname & protocol for your site
-baseurl: "/comepaolo-blog"
+url: "https://riccardomaldini.it"
+baseurl: "" # empty for custom domain
+
 #used to display twitter cards
 twitter_handle: "@comepaolo_official"
 
