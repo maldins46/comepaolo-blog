@@ -4,7 +4,11 @@ title: "Iello Pricacy Policy"
 date: 2025-08-23 00:00:00
 categories: legal
 tags: legal
-permalink: /ielloPrivacyPolicy
+permalink: /legal/iello-privacy-policy
+redirect_from:
+  - /ielloPrivacyPolicy
+  - /ielloPrivacyPolicy.html
+  - /ielloprivacypolicy
 ---
 
 <p> Iello Development Team built the Iello app as an Open Source app. This SERVICE is provided by Iello Development Team at no cost and is intended for use as is.

@@ -4,7 +4,11 @@ title: "Solaria Pricacy Policy"
 date: 2025-08-23 00:00:00
 categories: legal
 tags: legal
-permalink: /solariaPrivacyPolicy
+permalink: /legal/solaria-privacy-policy
+redirect_from:
+  - /solariaPrivacyPolicy
+  - /solariaPrivacyPolicy.html
+  - /solariaprivacypolicy
 ---
 
  <p> Riccardo Maldini built the Solaria 102 app as a Free app. This SERVICE is provided by Riccardo Maldini at no cost and is intended for use as is.

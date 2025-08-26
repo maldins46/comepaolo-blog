@@ -4,7 +4,11 @@ title: "MotoAssist Pricacy Policy"
 date: 2025-08-23 00:00:00
 categories: legal
 tags: legal
-permalink: /motoAssistPrivacyPolicy
+permalink: /legal/motoassist-privacy-policy
+redirect_from:
+  - /motoAssistPrivacyPolicy
+  - /motoAssistPrivacyPolicy.html
+  - /motoassistprivacypolicy
 ---
 
 <p> Riccardo Maldini built the MotoAssist GP app as an Ad Supported app. This SERVICE is provided by Riccardo Maldini at no cost and is intended for use as is.

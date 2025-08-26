@@ -4,7 +4,11 @@ title: "BetAssist Pricacy Policy"
 date: 2025-08-23 00:00:00
 categories: legal
 tags: legal
-permalink: /betAssistPrivacyPolicy
+permalink: /legal/betassist-privacy-policy
+redirect_from:
+  - /betAssistPrivacyPolicy
+  - /betAssistPrivacyPolicy.html
+  - /betassistprivacypolicy
 ---
 
 <p> Riccardo Maldini built the BetAssist app as an Ad Supported app. This SERVICE is provided by Riccardo Maldini at no cost and is intended for use as is.</p> <p>This page is used to inform visitors regarding my policies with the collection, use, and
