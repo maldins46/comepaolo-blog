@@ -6,8 +6,8 @@
 </description>
     <link>https://maldins46.github.io/comepaolo-blog/</link>
     <atom:link href="https://maldins46.github.io/comepaolo-blog/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Tue, 26 Aug 2025 10:45:47 +0000</pubDate>
-    <lastBuildDate>Tue, 26 Aug 2025 10:45:47 +0000</lastBuildDate>
+    <pubDate>Tue, 26 Aug 2025 11:00:59 +0000</pubDate>
+    <lastBuildDate>Tue, 26 Aug 2025 11:00:59 +0000</lastBuildDate>
     <generator>Jekyll v3.10.0</generator>
     
       <item>
@@ -67,7 +67,7 @@ git push origin v1.2.0&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
 &lt;p&gt;It also adds a layer of professionalism. Each release of my CV is versioned, timestamped, and archived. If someone asked me for the version I used in an application months ago, I could retrieve it instantly. It’s like having a changelog of my professional life.&lt;/p&gt;
 
-&lt;p&gt;And maybe the biggest win: peace of mind. I know that the link to my GitHub Releases page always points to an authoritative, up-to-date version of my resume. That alone makes it worth it. When needed, it is sufficient to provide to a recruiter a link to the &lt;a href=&quot;https://github.com/maldins46/MaldiniCV/releases/latest&quot;&gt;latest release&lt;/a&gt;, as for any software library. Cool, isn’t it? :)&lt;/p&gt;
+&lt;p&gt;And maybe the biggest win: peace of mind. I know that the link to my GitHub Releases page always points to an authoritative, up-to-date version of my resume. That alone makes it worth it. When needed, it is sufficient to provide to a recruiter a link to the &lt;a href=&quot;https://github.com/maldins46/MaldiniCV/releases/latest/download/cv-maldini.pdf&quot;&gt;latest release&lt;/a&gt;, as for any software library. Cool, isn’t it? :)&lt;/p&gt;
 
 &lt;hr /&gt;
 
