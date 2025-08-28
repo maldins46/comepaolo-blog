@@ -1,11 +1,11 @@
 ---
 layout: post
-title: "Comepaolo Blog: how I built my personal website"
+title: "The Comepaolo Blog: how I built my personal website"
 date: 2025-08-28 00:00:00
 categories: projects
 tags: projects jekyll ruby automation
-image: /assets/article_images/2025-08-23-maldini-cv/MaldiniCV-back.jpg
-image2: /assets/article_images/2025-08-23-maldini-cv/MaldiniCV-back.jpg
+image: /assets/article_images/2025-08-28-my-website/cover-meme.png
+image2: /assets/article_images/2025-08-28-my-website/cover-meme-mobile.jpg
 permalink: /:categories/:title/
 ---
 
@@ -15,6 +15,8 @@ If you work in software and you’re wandering around my blog, maybe this is the
 Is the blog powered by a CMS? Is it just a static websit, an Angular PWA? Could I build something similar for myself?
 
 If you’ve ever thought about that, you’re in the right place. Let’s start from the beginning.
+
+---
 
 ## The origins
 
@@ -40,6 +42,8 @@ My first idea was to **turn it into an online CV**. I wanted a place to showcase
 
 The first template I used was [Photon](https://html5up.net/photon), a versatile personal template. Then I tried [Miniport](https://html5up.net/miniport), which was a bit more CV-oriented, and finally settled on [Strata](https://html5up.net/strata).
 
+![The first version of the website, created with Strata. Actually, this is a screen of the original template, not my actual website (it has been lost in the internet, sadly), but it was exactly like that.]({{ site.baseurl }}/assets/article_images/2025-08-28-my-website/strataWebsite.png "The Strata Website")
+
 It worked for its purpose… but it was also very limited. It was just a static page, and every change required a lot of manual editing in HTML and CSS.
 
 I considered building something from scratch with Angular (which I already knew), but I never found the right motivation to start that journey.
@@ -48,19 +52,23 @@ I considered building something from scratch with Angular (which I already knew)
 
 Another option was to use a CMS. I experimented with WordPress, and I liked the idea of having a “framework” to handle all the logic behind the scenes so I could focus on writing content. But I quickly ran into three problems:
 
-- WordPress is primarily designed for blogs. Plugins make it very flexible, but using it for a CV website always felt a bit forced. (Not a real blocker, just a personal “smell” I’ve always had with WordPress.)
-- The CV templates available were either ugly, paid, or really hard to customize.
-- WordPress requires a MySQL database and a PHP runtime. Each of these adds cost to a hosting plan.
+- WordPress is **primarily designed for blogs**. Plugins make it very flexible, but using it for a CV website always felt a bit forced. (Not a real blocker, just a personal “smell” I’ve always had with WordPress.)
+- The **CV templates** available were either ugly, paid, or really hard to customize.
+- WordPress **requires a MySQL database and a PHP runtime**. Each of these adds cost to a hosting plan.
 
 All of this made me look for alternatives.
 
-The breakthrough came when I discovered the concept of file-based CMS. This idea, which started gaining momentum around 2020, offered an alternative: instead of using a database, the CMS would rely on the filesystem itself, saving content as regular files. This immediately caught my interest — especially because it meant I could avoid paying for a MySQL database.
+The breakthrough came when I discovered the concept of **file-based CMS**. This idea, which started gaining momentum around 2020, offered an alternative: instead of using a database, the CMS would rely on the filesystem itself, saving content as regular files. This immediately caught my interest — especially because it meant I could avoid paying for a MySQL database.
 
-That’s how I found [Grav](https://getgrav.org), a simple file-based CMS that worked perfectly. It even provided “skeletons” — pre-made templates you could unpack directly into your hosting space and start using right away.
+That’s how I found **[Grav](https://getgrav.org)**, a simple file-based CMS that worked perfectly. It even provided “skeletons” — pre-made templates you could unpack directly into your hosting space and start using right away.
 
 I switched to Grav with a CV-themed skeleton called [Hola](https://github.com/devlom/grav-skeleton-hola), which I heavily customized for my needs. This version of the website lasted for years. It was flexible, easy to use, and very low-maintenance. Adding a new project, education, or work experience was as simple as editing a post and uploading a few photos — Grav handled the rest.
 
 In the following years, I focused more on the content than the structure: updating graphics, adding descriptions of my work, and expanding the project list as I built new things.
+
+![A snapshot of my website with the Grav Hola Template. Look how sick those project graphics were!]({{ site.baseurl }}/assets/article_images/2025-08-28-my-website/holaWebsite2.png "The Hola Website")
+
+The website is still available [on the Internet Archive](https://web.archive.org/web/20250421150702/https://www.riccardomaldini.it/) if you want to have a glimpse of how it appeared. The splash screen an typography were actually a bit different, to be honest, as it is not rendered correctly. My version also had a cool photo of myself on the background. The project section in particular, was quite fire with all those graphics 🔥
 
 ### Shifting to the blog approach
 
@@ -73,6 +81,8 @@ That’s when I decided to switch to a blog format. I created **The Comepaolo Bl
 The first version of the blog used, once again, a Grav theme: [Mediator](https://github.com/getgrav/grav-skeleton-mediator-site), a theme inspired by Medium’s design. It’s actually the same theme I still use today, even if a lot has changed under the hood (I’ll get to that in a minute).
 
 I created the initial content, set up the skeleton of the site, and added a few customizations. I even [contributed to the open source project of the theme](https://github.com/getgrav/grav-theme-mediator/pull/25) with some optimizations.
+
+![The actual bloggish-style of the website, based on the Mediator theme]({{ site.baseurl }}/assets/article_images/2025-08-28-my-website/mediatorWebsite.png "The Mediator-themed Website")
 
 I really enjoyed this approach, and I still do. But once again, something was missing. I decided to tackle that just a few weeks ago.
 
@@ -90,19 +100,25 @@ That’s when the idea for the comepaolo-blog GitHub project was born. And in le
 
 Let’s do a quick dive into it.
 
+---
+
 ## The comepaolo-blog Project
 
-The current version of my website lives inside the [comepaolo-blog project](https://github.com/maldins46/comepaolo-blog), which started as a fork of the [Mediator Jekyll theme](https://github.com/dirkfabisch/mediator) originally created by **dirkfabisch**. Mediator was designed as a clean, Medium-inspired theme, and it gave me a solid and elegant foundation to build upon.
+The current version of my website lives inside the [comepaolo-blog project](https://github.com/maldins46/comepaolo-blog), which started as a fork of the [Mediator Jekyll theme](https://github.com/dirkfabisch/mediator) originally created by [dirkfabisch](https://github.com/dirkfabisch/). Mediator was designed as a clean, Medium-inspired theme, and it gave me a solid and elegant foundation to build upon.
 
-I didn’t just fork it and leave it untouched, though. Over time, I shaped it to better reflect my needs and style. Some changes were simple customizations to the blog layout and sections, while others were more structural. For example, I extended the tag system so that tags are now more prominent: each post shows its tags, and clicking on them brings you to a dedicated page listing all related articles. This feels much more natural when browsing older content.
+![The actual comepaolo-blog project on GitHub.]({{ site.baseurl }}/assets/article_images/2025-08-28-my-website/comepaoloblogGithub.png "The Comepaolo Blog Project")
+
+I didn’t just fork it and leave it untouched, though. Over time, I shaped it to better reflect my needs and style. Some changes were simple customizations to the **blog layout and sections**, while others were more structural. For example, I extended the **post tag system** so that tags are now more prominent: each post shows its tags, and clicking on them brings you to a dedicated page listing all related articles. This feels much more natural when browsing older content.
 
 Another important addition was the **legal section**. On my Grav site, I had hosted privacy policies and terms for my apps, and I wanted a smooth transition without breaking links. I rebuilt that section in Jekyll with a design consistent with the rest of the site, ensuring one-to-one retrocompatibility while improving the overall look.
 
-I also worked on small but useful enhancements: favicon and metadata support, an updated FontAwesome version, and various layout tweaks that made the theme feel more polished for my purposes.
+I also worked on **small but useful enhancements**: extened favicon and metadata support, an updated FontAwesome version, and various layout tweaks that made the theme feel more polished for my purposes.
 
 The biggest structural shift, however, was in how the site is deployed. Instead of manually uploading files or relying on a provider’s hosting tools, the whole process now runs through **GitHub Actions**. Each commit to the main branch triggers an automated build and deploy, and the output is directly published on GitHub Pages under my personal domain. This makes maintenance much lighter and aligns perfectly with a software engineering mindset: versioned, automated, and repeatable.
 
 Looking back, this project has also been a sort of **gym** for me. It was the first time I extensively used Jekyll in a real setting, experimenting with Liquid templates and content organization, and figuring out how to bend the system to my needs. The migration itself—from Grav to Jekyll—was almost frictionless thanks to Markdown being the common ground, and it felt like a natural evolution rather than a rewrite.
+
+---
 
 ## Conclusion
 
@@ -112,4 +128,4 @@ The main advantage of this setup is that it behaves like a proper software proje
 
 In the end, Comepaolo Blog is still just my personal space online—but one that reflects not only who I am, but also how I work.
 
-And for me, that combination feels just right.
+And for me, **that combination feels just right**.

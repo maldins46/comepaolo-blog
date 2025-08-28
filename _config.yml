@@ -38,6 +38,13 @@ twitter_handle: "@comepaolo_official"
 
 # social icons and sharing options
 social:
+  - icon: linkedin
+    url: https://www.linkedin.com/in/riccardo-maldini-a6b684132/
+    desc: Find me on LinkedIn
+    share_url: //www.linkedin.com/shareArticle?mini=true
+    share_title: "&title="
+    share_link: "&url="
+
   - icon: github
     url: https://github.com/maldins46
     desc: Fork me on github
@@ -48,20 +55,6 @@ social:
   - icon: envelope-o
     url: "mailto:riccardo.maldini@gmail.com"
     desc: Contact me via email
-    share_url:
-    share_title:
-    share_link:
-
-  - icon: linkedin
-    url: https://www.linkedin.com/in/riccardo-maldini-a6b684132/
-    desc: Find me on LinkedIn
-    share_url: //www.linkedin.com/shareArticle?mini=true
-    share_title: "&title="
-    share_link: "&url="
-
-  - icon: instagram
-    url: https://www.instagram.com/maldini_comepaolo
-    desc: Connect with me on Instagram
     share_url:
     share_title:
     share_link:
