@@ -56,7 +56,7 @@ By the time I finished, I was ready to move on to something of my own.
 
 The first version of BetAssist was simple: a **betslip editor**.
 
-![BetAssist had a mascotte also. It didn't have a name, but was used on some of the graphics and logo, inspired by the Android original logo.]({{ site.baseurl }}/assets/article_images/2025-06-16-betassist/mascotte.jpg "The BetAssist Mascotte)
+![BetAssist had a mascotte also. It didn't have a name, but was used on some of the graphics and logo, inspired by the Android original logo.]({{ site.baseurl }}/assets/article_images/2025-06-16-betassist/mascotte.jpg "The BetAssist Mascotte")
 
 Users could create betslips by combining clubs from various European leagues. They could define matches, choose outcomes like 1X2 or over/under 2.5 goals, assign dates, and—crucially—receive phone notifications when the matches ended.
 

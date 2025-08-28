@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Automating my CV with GitHub Actions: versioned, auto-built, and always up-to-date"
+title: "MaldiniCV: The history of how I automated my CV with GitHub Actions"
 date: 2025-08-23 00:00:00
 categories: projects
 tags: projects cv automation latex
