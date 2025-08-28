@@ -104,13 +104,15 @@ Let’s do a quick dive into it.
 
 ## The comepaolo-blog Project
 
-The current version of my website lives inside the [comepaolo-blog project](https://github.com/maldins46/comepaolo-blog), which started as a fork of the [Mediator Jekyll theme](https://github.com/dirkfabisch/mediator) originally created by [dirkfabisch](https://github.com/dirkfabisch/). Mediator was designed as a clean, Medium-inspired theme, and it gave me a solid and elegant foundation to build upon.
+The current version of my website lives inside the **[comepaolo-blog project](https://github.com/maldins46/comepaolo-blog)**, which started as a fork of the [Mediator Jekyll theme](https://github.com/dirkfabisch/mediator) originally created by [dirkfabisch](https://github.com/dirkfabisch/). Mediator was designed as a clean, Medium-inspired theme, and it gave me a solid and elegant foundation to build upon.
 
 ![The actual comepaolo-blog project on GitHub.]({{ site.baseurl }}/assets/article_images/2025-08-28-my-website/comepaoloblogGithub.png "The Comepaolo Blog Project")
 
 I didn’t just fork it and leave it untouched, though. Over time, I shaped it to better reflect my needs and style. Some changes were simple customizations to the **blog layout and sections**, while others were more structural. For example, I extended the **post tag system** so that tags are now more prominent: each post shows its tags, and clicking on them brings you to a dedicated page listing all related articles. This feels much more natural when browsing older content.
 
 Another important addition was the **legal section**. On my Grav site, I had hosted privacy policies and terms for my apps, and I wanted a smooth transition without breaking links. I rebuilt that section in Jekyll with a design consistent with the rest of the site, ensuring one-to-one retrocompatibility while improving the overall look.
+
+Final essential additions, is the possibility to **react and discuss about a given post**. I introduced the possibility to do that using [Giscus](https://giscus.app), an open source alternative to Disqus, based on the GitHub API and the Discussions feature of the repository itself, binding the discussions to the project.
 
 I also worked on **small but useful enhancements**: extened favicon and metadata support, an updated FontAwesome version, and various layout tweaks that made the theme feel more polished for my purposes.
 

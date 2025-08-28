@@ -66,16 +66,34 @@
           {{content}}
         </section>
         <footer class="post-footer">
-          <section class="share">
-            {% for social in site.social %}
-              {% if social.share_url != null %}
-                <a class="icon-{{ social.icon }}" href="{{ social.share_url }}{% if social.share_title %}{{ social.share_title }}{{page.title | cgi_escape}}{% endif %}{{ social.share_link }}{{site.url}}{{site.baseurl}}{{page.id}}"
-                  onclick="window.open(this.href, '{{ social.icon }}-share', 'width=550,height=255');return false;">
-                <i class="fa fa-{{ social.icon }}"></i><span class="hidden">{{ social.icon }}</span>
-                </a>
-              {% endif %}
-            {% endfor %}
+          <section class="giscus">
+            <script src="https://giscus.app/client.js"
+                    data-repo="maldins46/comepaolo-blog"
+                    data-repo-id="R_kgDOPjsN1w"
+                    data-category="Announcements"
+                    data-category-id="DIC_kwDOPjsN184CutK1"
+                    data-mapping="pathname"
+                    data-strict="0"
+                    data-reactions-enabled="1"
+                    data-emit-metadata="0"
+                    data-input-position="bottom"
+                    data-theme="light"
+                    data-lang="it"
+                    crossorigin="anonymous"
+                    async>
+            </script>
           </section>
+
+          <section class="share">
+              {% for social in site.social %}
+                {% if social.share_url != null %}
+                  <a class="icon-{{ social.icon }}" href="{{ social.share_url }}{% if social.share_title %}{{ social.share_title }}{{page.title | cgi_escape}}{% endif %}{{ social.share_link }}{{site.url}}{{site.baseurl}}{{page.id}}"
+                    onclick="window.open(this.href, '{{ social.icon }}-share', 'width=550,height=255');return false;">
+                  <i class="fa fa-{{ social.icon }}"></i><span class="hidden">{{ social.icon }}</span>
+                  </a>
+                {% endif %}
+              {% endfor %}
+            </section>
         </footer>
         <div class="bottom-teaser cf">
           <div class="isLeft">
