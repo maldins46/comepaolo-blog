@@ -8,10 +8,11 @@
 ## Features (what's more over Mediator)
 
 - Customization of the blog posts and sections based on my needs (obviously)
-- Add comment section powered by [Giscus](https://giscus.app) (open source alternative do disqus, based on GitHub Discussions)
-- Extended support for tags. From this fork now the posts' tags appear on the section, and clicking on them redirects to the tag page with all the linked items
-- Automated GitHub Pages deployment via GitHub Actions: each commit in `master` branch triggers a deploy. The environment is configured to point to my personal website
-- Add `legal` section to host all the policies linked to my apps, that I had on my previous website (with 1-to-1 retrocompatibility, and enhanced design based on this theme)
+- Add **comment section** powered by [Giscus](https://giscus.app) (open source alternative do disqus, based on GitHub Discussions)
+- Extended **support for post tags**. From this fork now the posts' tags appear on the section, and clicking on them redirects to the tag page with all the linked items
+- **Automated GitHub Pages deployment** via GitHub Actions: each commit in `master` branch triggers a deploy. The environment is configured to point to my personal website
+- **Add `legal` section** to host all the policies linked to my apps, that I had on my previous website (with 1-to-1 retrocompatibility, and enhanced design based on this theme)
+- Add website **privacy policy**
 - Various tweaks and enhancements (favicon extended support, updated fontawesome version, and others)
 
 ## Credits
