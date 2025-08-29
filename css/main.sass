@@ -234,12 +234,13 @@ body
 .post
   .article-image
     position: absolute
-    background-color: #000
+    background-color: #ffffff
     top: 0
     left: 0
     right: 0
     bottom: 0
     overflow: hidden
+
     @media(min-width: 700px)
       .post-image-image
         background-size: cover
@@ -251,6 +252,7 @@ body
         text-indent: -9999px
         padding-top: 33%
         z-index: 1
+        filter: brightness(0.5)
       .post-image-image2
         display: none
     @media(max-width: 700px)
@@ -266,6 +268,7 @@ body
         text-indent: -9999px
         padding-top: 33%
         z-index: 1
+        filter: brightness(0.5)
     .post-meta
       position: absolute
       bottom: $rs*5

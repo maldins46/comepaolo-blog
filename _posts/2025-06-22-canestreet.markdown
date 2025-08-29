@@ -4,8 +4,8 @@ title: "Hoops in the Heart of Jesi: The Rise of Canestreet 3x3"
 date: 2025-06-22 00:00:00
 categories: sport
 tags: featured sport basketball
-image: /assets/article_images/2025-06-22-canestreet/basket.jpg
-image2: /assets/article_images/2025-06-22-canestreet/basket.jpg
+image: /assets/article_images/2025-06-22-canestreet/cover-image.jpg
+image2: /assets/article_images/2025-06-22-canestreet/cover-image.jpg
 permalink: /:categories/:title/
 ---
 

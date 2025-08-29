@@ -4,8 +4,8 @@ title: "Live Scores, Real Pride: The Story Behind BetAssist"
 date: 2025-06-16 00:00:00
 categories: projects
 tags: projects java android
-image: /assets/article_images/2025-06-16-betassist/betback.jpg
-image2: /assets/article_images/2025-06-16-betassist/betback.jpg
+image: /assets/article_images/2025-06-16-betassist/cover-image.png
+image2: /assets/article_images/2025-06-16-betassist/cover-image.png
 permalink: /:categories/:title/
 ---
 

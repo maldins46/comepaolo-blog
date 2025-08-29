@@ -1,11 +1,11 @@
 ---
 layout: post
-title: "MaldiniCV: The history of how I automated my CV with GitHub Actions"
+title: "MaldiniCV: How I automated my Curriculum Vitae with GitHub Actions"
 date: 2025-08-23 00:00:00
 categories: projects
 tags: projects cv automation latex
-image: /assets/article_images/2025-08-23-maldini-cv/MaldiniCV-back.jpg
-image2: /assets/article_images/2025-08-23-maldini-cv/MaldiniCV-back.jpg
+image: /assets/article_images/2025-08-23-maldini-cv/cover-image.png
+image2: /assets/article_images/2025-08-23-maldini-cv/cover-image.png
 permalink: /:categories/:title/
 ---
 

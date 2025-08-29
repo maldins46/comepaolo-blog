@@ -1,11 +1,11 @@
 ---
 layout: post
-title: "The Comepaolo Blog: how I built my personal website"
+title: "The Comepaolo Blog: How I built my personal website"
 date: 2025-08-28 00:00:00
 categories: projects
 tags: projects jekyll ruby automation
-image: /assets/article_images/2025-08-28-my-website/cover-meme.png
-image2: /assets/article_images/2025-08-28-my-website/cover-meme-mobile.jpg
+image: /assets/article_images/2025-08-28-my-website/cover-image.png
+image2: /assets/article_images/2025-08-28-my-website/cover-image.png
 permalink: /:categories/:title/
 ---
 
@@ -15,6 +15,10 @@ If you work in software and you’re wandering around my blog, maybe this is the
 Is the blog powered by a CMS? Is it just a static websit, an Angular PWA? Could I build something similar for myself?
 
 If you’ve ever thought about that, you’re in the right place. Let’s start from the beginning.
+
+
+![Please appreciate my meme talent, thank you]({{ site.baseurl }}/assets/article_images/2025-08-28-my-website/cover-image.png "Meme post")
+
 
 ---
 
