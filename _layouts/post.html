@@ -25,8 +25,7 @@
               tagged on 
               {% for tag in page.tags %}
                 <span class="post-tag-{{ tag | slugify }}">
-                  {% unless forloop.first %}, {% endunless %}
-                  <a href="{{ site.baseurl }}/tag/{{ tag | slugify }}">{{ tag }}</a>
+                <a href="{{ site.baseurl }}/tag/{{ tag | slugify }}">{{ tag }}</a>{% unless forloop.last %}, {% endunless %}
                 </span>
               {% endfor %}       
             </div>
