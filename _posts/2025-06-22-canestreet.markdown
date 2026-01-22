@@ -61,13 +61,13 @@ That first success was a spark, and it lit a fire. The following year, we moved 
 
 Every summer became a new challenge.
 
-By 2022, we had moved to **Piazza della Repubblica**—the beating heart of Jesi. With support from the municipality, we installed a modular court and hoop in the middle of the square, right under the obelisk. The sound of basketballs bouncing off cobblestones became the new summer anthem.
+By 2024, we had moved to **Piazza della Repubblica**—the beating heart of Jesi. With support from the municipality, we installed a modular court and hoop in the middle of the square, right under the obelisk. The sound of basketballs bouncing off cobblestones became the new summer anthem.
 
 We introduced under-age categories, both male and female open tournaments, and even a 3-point contest, including a version just for amateurs. Each edition brought new energy, new faces, and new memories.
 
 No exaggeration: Canestreet has become a true part of Jesi’s summer identity—and equally a part of _our_ lives as organizers. It’s all thanks to Michele’s wild idea and the drive of a guy who keeps leading us on this crazy ride.
 
-![The Canestreet in Piazza Della Repubblica for the first time, 2024]({{ site.baseurl }}/assets/article_images/2025-06-22-canestreet/repubblica2024.jpg "Piazza della Repubblica 2024")
+![The Canestreet in Piazza Della Repubblica for the second time, 2025]({{ site.baseurl }}/assets/article_images/2025-06-22-canestreet/repubblica2025.jpg "Piazza della Repubblica 2025")
 
 ---
 
