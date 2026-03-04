@@ -84,20 +84,6 @@ And then? It just works. Every run, every ride—automated, synced, visible.
 
 ---
 
-## What Changed (and What Didn't)
-
-**Did this change my life? No.** I'm still the same person, doing the same workouts. The runs happened whether GitHub knew about them or not.
-
-But here's what it *did* change: **how I think about what counts as progress.**
-
-For years, I measured my growth almost exclusively through code. Ship a feature? Growth. Learn a new framework? Growth. Everything else—fitness, relationships, experiences—somehow felt less... official. Less trackable. Less real.
-
-GitFit is my quiet rebellion against that mindset. It's me saying: **taking care of myself counts.** Showing up for a run at 6 AM counts. Choosing to ride my bike instead of doom-scrolling counts.
-
-And yeah, seeing those activities reflected on my GitHub profile? That tiny bit of visible validation actually helps me show up again the next day.
-
----
-
 ## The Bigger Picture
 
 I know how this sounds. "You built an automation to make your GitHub graph prettier? Really?"
@@ -119,5 +105,3 @@ Because when your GitHub contribution graph finally reflects the full picture of
 ---
 
 *GitFit is open source and available on [GitHub](https://github.com/maldins46/GitFit). The setup takes about 10 minutes, and it's compatible with any Strava account. Your workout data stays private—only the commits show up.*
-
-*Now if you'll excuse me, I have a 5K to run. Those green squares won't earn themselves.*
